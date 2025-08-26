@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Handbook - Six Sigma: Module 1</title>
+    <title>Engineering Handbook - Thermodynamics</title>
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -19,7 +19,7 @@
                 <li><a href="https://briantbell.github.io/EngHandbook/">Home</a></li>
                 <!--Modules-->
                 <hr>
-                <p>Topc</p>
+                <p>Thermodynamics</p>
                 <li><a href="index.html">Equations</a></li>
                 <li><a href="examples.html">Worked Examples</a></li>
                 <hr>
@@ -42,16 +42,79 @@
     <!--Main Site Content-->
     <div class="content">
         <header>
-            <h1>Topic</h1>
+            <h1>Thermodynamics</h1>
         </header>
         <main>
             <!--Subtopic-->
             <section>
-                <h2>Subheader</h2>
-                <p>Lorem.</p>
+                <h2>What is Thermodynamics?</h2>
+                <p>Thermodynamics is the study of energy, heat, and work interactions within physical systems. It explores how energy transforms between forms, governing processes in engines, refrigerators, and power plants. Key concepts include temperature, pressure, entropy, and enthalpy, which define system behavior during processes like heating, compression, or expansion. Thermodynamics underpins engineering designs, ensuring efficiency and performance in systems from HVAC to jet engines.</p>
             </section>
             <hr>
-            
+            <!--Equations-->
+            <h2>1. Fundamental Properties</h2>
+            <p>Pressure: \( P = \frac{F}{A} \)</p>
+            <p>Temperature (ideal gas): \( T = \frac{P V}{n R} \)</p>
+            <p>Density: \( \rho = \frac{m}{V} \)</p>
+            <p>Specific Volume: \( v = \frac{V}{m} = \frac{1}{\rho} \)</p>
+            <p>Ideal Gas Law: \( P V = n R T \) or \( P v = R T \) (per unit mass)</p>
+            <p>Gas Constant: \( R = \frac{\bar{R}}{M} \), \( \bar{R} = 8.314 \, \text{J/(mol·K)} \)</p>
+            <hr>
+
+            <h2>2. First Law of Thermodynamics</h2>
+            <p>Closed System: \( \Delta U = Q - W \)</p>
+            <p>Open System (Steady Flow): \( \dot{Q} - \dot{W} = \dot{m} \left[ \left( h_2 - h_1 \right) + \frac{1}{2} \left( v_2^2 - v_1^2 \right) + g \left( z_2 - z_1 \right) \right] \)</p>
+            <p>Internal Energy: \( \Delta U = m c_v \Delta T \) (constant volume)</p>
+            <p>Enthalpy: \( h = u + P v \), \( \Delta H = m c_p \Delta T \) (constant pressure)</p>
+            <p>Work (Closed System): \( W = \int P \, dV \)</p>
+            <hr>
+
+            <h2>3. Second Law of Thermodynamics</h2>
+            <p>Entropy Change: \( \Delta S = \int \frac{dQ_{\text{rev}}}{T} \)</p>
+            <p>Ideal Gas Entropy: \( \Delta s = c_p \ln \frac{T_2}{T_1} - R \ln \frac{P_2}{P_1} \) or \( \Delta s = c_v \ln \frac{T_2}{T_1} + R \ln \frac{v_2}{v_1} \)</p>
+            <p>Carnot Efficiency: \( \eta = 1 - \frac{T_C}{T_H} \) (absolute temperatures)</p>
+            <p>Clausius Inequality: \( \oint \frac{dQ}{T} \leq 0 \)</p>
+            <hr>
+
+            <h2>4. Thermodynamic Processes</h2>
+            <p>Isothermal (\( T = \text{constant} \)):</p>
+            <p>Work: \( W = P_1 V_1 \ln \frac{V_2}{V_1} = n R T \ln \frac{V_2}{V_1} \)</p>
+            <p>Isobaric (\( P = \text{constant} \)):</p>
+            <p>Work: \( W = P \Delta V \)</p>
+            <p>Isochoric (\( V = \text{constant} \)):</p>
+            <p>Work: \( W = 0 \)</p>
+            <p>Adiabatic (\( Q = 0 \)):</p>
+            <p>\( P V^\gamma = \text{constant} \), \( T V^{\gamma-1} = \text{constant} \), \( \gamma = \frac{c_p}{c_v} \)</p>
+            <p>Work: \( W = \frac{P_2 V_2 - P_1 V_1}{1 - \gamma} \)</p>
+            <hr>
+
+            <h2>5. Thermodynamic Cycles</h2>
+            <p>Carnot Cycle Efficiency: \( \eta = 1 - \frac{T_C}{T_H} \)</p>
+            <p>Rankine Cycle Efficiency: \( \eta = \frac{W_{\text{turbine}} - W_{\text{pump}}}{Q_{\text{in}}} \)</p>
+            <p>Otto Cycle Efficiency: \( \eta = 1 - \frac{1}{r^{\gamma-1}} \), \( r = \frac{V_{\text{max}}}{V_{\text{min}}} \)</p>
+            <p>Brayton Cycle Efficiency: \( \eta = 1 - \frac{1}{r_p^{(\gamma-1)/\gamma}} \), \( r_p = \frac{P_{\text{max}}}{P_{\text{min}}} \)</p>
+            <hr>
+
+            <h2>6. Heat Transfer</h2>
+            <p>Conduction (Fourier’s Law): \( q = -k A \frac{dT}{dx} \)</p>
+            <p>Convection: \( q = h A (T_s - T_\infty) \)</p>
+            <p>Radiation: \( q = \epsilon \sigma A T^4 \), \( \sigma = 5.67 \times 10^{-8} \, \text{W/(m}^2\text{·K}^4\text{)} \)</p>
+            <p>Overall Heat Transfer: \( Q = U A \Delta T \), \( U = \text{overall heat transfer coefficient} \)</p>
+            <hr>
+
+            <h2>7. Properties of Pure Substances</h2>
+            <p>Saturated Liquid-Vapor: Use steam tables for \( P, T, v, u, h, s \).</p>
+            <p>Quality (vapor mass fraction): \( x = \frac{m_{\text{vapor}}}{m_{\text{total}}} \)</p>
+            <p>Specific Property: \( y = y_f + x (y_g - y_f) \), \( y = v, u, h, s \)</p>
+            <p>Compressibility Factor: \( Z = \frac{P v}{R T} \), \( Z = 1 \) for ideal gas.</p>
+            <hr>
+
+            <h2>8. Gas Mixtures</h2>
+            <p>Dalton’s Law: \( P = \sum P_i \), \( P_i = y_i P \) (partial pressure)</p>
+            <p>Amagat’s Law: \( V = \sum V_i \), \( V_i = y_i V \) (partial volume)</p>
+            <p>Mole Fraction: \( y_i = \frac{n_i}{n} \)</p>
+            <p>Mass Fraction: \( m_i = \frac{m_i}{m} \)</p>
+            <hr>
         </main>
         <footer>
             <p>Find something wrong? Want to contribute? Please email me!.</p>
