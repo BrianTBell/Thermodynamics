@@ -1,0 +1,169 @@
+:root {
+    --background-color: #F5F5F5;
+    --primary-text-color: #1A1A1A;
+    --primary-color: #2A4B7C;
+    --secondary-color: #D4E4FC;
+    --hover-color: #ff6200;
+}
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    transition: margin-left 0.3s ease;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+main {
+    width: 95%
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0px 50px 0px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+section {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2.6em;
+    font-family: "Silkscreen", sans-serif;
+    color: var(--primary-color)
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+li a:hover {
+    color: var(--hover-color);
+}
+
+summary:hover {
+    color: var(--hover-color);
+}
+
+.donation_station {
+    display: block;
+    margin: 0 auto;
+    position: relative; /* Changed from absolute to work within scrollable container */
+    max-width: 90%;
+    width: 100%;
+}
+
+.donation_image {
+    display: block;
+    margin: 0 auto;
+    max-width:100%;
+    border-radius: 5px;
+}
+
+.donation_button {
+    width: 100%;
+    margin: 16px 0px 16px 0px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc107cb;
+}
+
+.donation_button:hover {
+    background: #20ff54;
+    border: 2px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    padding: 6px;
+    margin-right: 20px;
+}
+
+.navbar.hidden {
+    transform: translateX(-100%);
+}
+
+.navbar-scroll {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 60px; /* Space for toggle button */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.navbar li {
+    padding: 8px 15px 8px 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    line-height: 40px;
+}
+
+.navbar.hidden ~ .show-btn {
+    display: block;
+}
+
+.content {
+    margin-left: 230px;
+    transition: margin-left 0.3s ease;
+}
+
+.navbar.hidden ~ .content {
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-scroll {
+        max-height: calc(100vh - 60px); /* Prevent overflow beyond toggle button */
+    }
+}
